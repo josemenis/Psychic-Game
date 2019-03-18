@@ -8,26 +8,16 @@ var wins = 0;
 var losses = 0;
 
 // variables for # of guesses and choices
-var numGuesses = 9;
-var guessChoices = [];
-
-
-// Create variables that hold references to the places in the HTML 
-// where we want to display things.
-var directionsText = document.getElementById("directions-text");
-var computerChoiceText = document.getElementById("computerchoice-text");
-
-var winsText = document.getElementById("wins-text");
-var lossesText = document.getElementById("losses-text");
-
-
-var guessText = document.getElementById("guess-text");
-var userChoiceText = document.getElementById("userchoice-text");
+var guessesLeft = 9;
+var lettersGuessed = [];
+var computerGuess = [];
 
 // function document.onkeyup runs when the user presses a key.
 document.onkeyup = function(event) {
     // Shows which key the user pressed.
     var userGuess = event.key;
+    lettersGuessed.push(userGuess);
+
     // Shows computer guess, then random choice based on array length.
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
@@ -40,33 +30,37 @@ document.onkeyup = function(event) {
 
     
     // if user guess === computer guess, user wins
-    if (userGuess === computerGuess) {
+    if ((userGuess === computerGuess[0]) && (guessesLeft > 0)) {
         wins++;
-        numGuesses = 9;
-		guessChoices = [];
-      }
+        guessesLeft = 9;
+	lettersGuessed.length = 0;
+	computerGuess.length = 0;
+	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	computerGuess.push(compGuess);
+	}
 
-      if (userGuess != computerGuess) {
-        numGuesses --;
-        guessChoices.push(userGuess);
+     else if ((userGuess !==  computerGuess[0])  && (guessesLeft > 0)) {
+        guessesLeft = guessesLeft-1;
     }  
 
-    // if the user guess 
-    if (userGuess === 0) {
-        numGuesses = 9;
+    else {
         losses++;
-        guessChoices = [];
+        guessesLeft = 9;
+        lettersGuessed.length = 0;
+        computerGuess.length = 0;
+        var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        computerGuess.push(compGuess);
     }
 
 
 
-        computerChoiceText.textContent = `Computer Letter Guess: ${computerGuess}`;
-        winsText.textContent = `wins: ${wins}`;
-        lossesText.textContent = `losses:${losses}`;
+    var html = "<p>Guess what letter I'm thinking of!</p>" +
+          "<p>Wins: " + wins + "</p>" +
+          "<p>Losses: " + losses + "</p>" +
+          "<p>Guesses left: " + guessesLeft + "</p>" +
+          "<p>Your guesses so far: " + lettersGuessed + "</p>";
+ 
+document.querySelector("#game").innerHTML = html;
 
-        GuessText.textContent = `Guesses Left ${numGuesses}`;
-        userChoiceText.textContent = `Your Letter Guessed: ${guessChoices}`;
-    
     }
 };
-

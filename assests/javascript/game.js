@@ -33,11 +33,9 @@ document.onkeyup = function(event) {
     if ((userGuess === computerGuess[0]) && (guessesLeft > 0)) {
         wins++;
         guessesLeft = 9;
-	lettersGuessed.length = 0;
-	computerGuess.length = 0;
-	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-	computerGuess.push(compGuess);
-	}
+	    lettersGuessed.length = 0;
+	    computerGuess.length = 0;    
+}
 
      else if ((userGuess !==  computerGuess[0])  && (guessesLeft > 0)) {
         guessesLeft = guessesLeft-1;
@@ -47,9 +45,7 @@ document.onkeyup = function(event) {
         losses++;
         guessesLeft = 9;
         lettersGuessed.length = 0;
-        computerGuess.length = 0;
-        var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        computerGuess.push(compGuess);
+        computerGuess.length = 0;    
     }
 
 
@@ -60,7 +56,7 @@ document.onkeyup = function(event) {
           "<p>Guesses left: " + guessesLeft + "</p>" +
           "<p>Your guesses so far: " + lettersGuessed + "</p>";
  
-document.querySelector("#game").innerHTML = html;
+    document.querySelector("#game").innerHTML = html;
 
     }
 };

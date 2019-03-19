@@ -30,7 +30,8 @@ document.onkeyup = function(event) {
 
 	if (options.indexOf(userGuess) > -1) {
     
-
+    // html viewed with JS. Not by ID as in RPS game in activities. 
+    // i changed ID's to this below because of console errors. I couln't figure out how to fix it.
     var html = "<p>Guess what letter I'm thinking of!</p>" +
     "<p>Wins: " + wins + "</p>" +
     "<p>Losses: " + losses + "</p>" +
@@ -40,18 +41,20 @@ document.onkeyup = function(event) {
   document.querySelector("#game").innerHTML = html;
 
     
-    // if user guess === computer guess, user wins
+    // if user guess === computer guess and guesses left are greater than zero,
+    // user wins.
     if ((userGuess === computerGuess[0]) && (guessesLeft > 0)) {
         wins++;
         guessesLeft = 9;
 	    lettersGuessed.length = 0;
 	    computerGuess.length = 0;    
 }
-    
+    // if user guess does not = computer guess and guesses left are greater than zero
+    // guesses left gets subtracted by one.
      else if ((userGuess !==  computerGuess[0])  && (guessesLeft > 0)) {
         guessesLeft = guessesLeft-1;
     }  
-
+    // opposite of wins
     else {
         losses++;
         guessesLeft = 9;

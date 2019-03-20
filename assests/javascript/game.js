@@ -17,6 +17,8 @@ var computerGuess = [];
 document.onkeyup = function(event) {
     // Shows which key the user pressed.
     var userGuess = event.key;
+
+    // shows the letters guessed by user.
     lettersGuessed.push(userGuess);
 
     // Shows computer guess, then random choice based on array length.
@@ -27,7 +29,8 @@ document.onkeyup = function(event) {
     "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", 
     "x", "y", "z",];
 		 	
-
+    // google mdn indexof
+    // The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 	if (options.indexOf(userGuess) > -1) {
     
     // html viewed with JS. Not by ID as in RPS game in activities. 
@@ -38,6 +41,7 @@ document.onkeyup = function(event) {
     "<p>Guesses left: " + guessesLeft + "</p>" +
     "<p>Your guesses so far: " + lettersGuessed + "</p>";
 
+// displaying from HTML
   document.querySelector("#game").innerHTML = html;
 
     

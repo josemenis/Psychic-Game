@@ -67,3 +67,4 @@ document.onkeyup = function(event) {
     }
     }
 };
+    // note linked this project to my portfolio but I am still getting the 404 error.

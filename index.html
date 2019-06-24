@@ -1,50 +1,32 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Psychic Game</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- relative paths -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <!-- relative paths -->
     <link href="assests/css/style.css" rel="stylesheet" type="text/css">
+    <!-- ///////////////////////////////////////////////////////////////////////// -->
     <!-- didn't link the reset.css bc it kept popping up in the console log,
         and I wasn't sure how to use the reset. -->
-    <title>Psychic-Game</title>
-</head>
-<body>
-<div id= "game">
-  <!-- Basic html bc using ID's and referencing 
-  them in JS wasn't working out for me -->
-  <h1>Psychic-Game</h1>
-
-<!-- <p> "Guess what I'm thinking of" </p> 
-     also code that makes computer guess a random letter-->
-<p>Guess what letter I'm thinking of!</p>
-
-<!-- Wins: (# of times the user has guessed the letter correctly)-->
-<p>Wins: 0</p>
-
-<!-- Losses: (# of times the user has failed to guess the letter 
-     correctly after exhausting all guesses) -->
-<p>Losses: 0</p>
-
-<!-- Guesses Left: (# of guesses left. This will update) -->
-<p>Guesses Left: 9</p>
-
-<!-- Your Guesses So Far: (the specific letters that the user typed. 
-     Display these until the user either wins or loses.)-->
-<p>Guesses so far:</p>
-
-
-<!-- I didn't get to the steps below -->
-<!-- When the player wins, increase the Wins counter and start 
-     the game over again (without refreshing the page). -->
-
-<!-- When the player loses, increase the Losses counter and restart
-     the game without a page refresh (just like when the user wins). -->
-<script src="assests/javascript/game.js"></script>   
-</body>
+     <!--///////////////////////////////////////////////////////////////////////// -->
+    <div class="jumbotron">
+      <h1 class="display-4">Psychic Game</h1>
+    </div>
+    <div id= "game">
+    <!-- Text from game.js will be displayed here. -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assests/javascript/game.js"></script>   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
-
-
-<!-- [Watch the demo](https://youtu.be/qTc45Lox97g). -->

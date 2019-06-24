@@ -45,11 +45,11 @@ document.onkeyup = function (event) {
     }
   }
   var html =
-    "<p>Guess what letter I'm thinking of!</p>" +
-    '<p>Wins: ' + wins + '</p>' +
-    '<p>Losses: ' + losses + '</p>' +
-    '<p>Guesses left: ' + guessesLeft + '</p>' +
-    '<p>Your guesses so far: ' + lettersGuessed + '</p>'
+    "<h1>Guess what letter I'm thinking of!</h1>" +
+    '<h2>Wins: ' + wins + '</h2>' +
+    '<h2>Losses: ' + losses + '</h2>' +
+    '<h2>Guesses left: ' + guessesLeft + '</h2>' +
+    '<h2>Your guesses so far: ' + lettersGuessed + '</h2>'
 
   // displaying from HTML
   document.getElementById('game').innerHTML = html

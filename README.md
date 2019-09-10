@@ -1,23 +1,22 @@
-## Option One: Psychic Game (Basic)
+# Option One: Psychic Game (Basic)
+---
+# Overview:
+## The app is a random letter guessing game.
+---
+# How it works:
 
-![Psychic](Images/1-Psychic.jpg)
+* Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. The following text on the page:
 
-1. [Watch the demo](https://youtu.be/qTc45Lox97g).
+* Guess what letter I'm thinking of
 
-2. You're going to make a game just like the one in the video. Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
+* Wins: (# of times the user has guessed the letter correctly)
 
-3. Guess what letter I'm thinking of
+* Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
 
-4. Wins: (# of times the user has guessed the letter correctly)
+* Guesses Left: (# of guesses left. This will update)
 
-5. Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
+* Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
 
-6. Guesses Left: (# of guesses left. This will update)
+* When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
 
-7. Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
-
-8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
-
-9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
-
-Game works properly. No input validation for only letters, but only letter choices can decrement guesses.
+* When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).

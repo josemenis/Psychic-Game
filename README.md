@@ -1,7 +1,9 @@
 # Option One: Psychic Game (Basic)
 ---
 # Overview:
-## The app is a random letter guessing game.
+## This app is a random letter guessing game using vanilla JS.
+
+[Link to App](https://josemenis.github.io/Psychic-Game/)
 ---
 # How it works:
 
